@@ -24,10 +24,11 @@ def setup():
 def race():
     global ts
     finishline=540
+    t_speed=[[0,10],[0,10],[0,10],[0,10],[2,12]]
 
     while True:
         for current_t in ts:
-            move=random.randint(0,10)
+            move=random.randint(t_speed[i][0],t_speed[i][1])
             current_t.forward(move)
 
             x=current_t.xcor()
