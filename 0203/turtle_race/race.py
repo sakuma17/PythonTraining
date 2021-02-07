@@ -15,8 +15,8 @@ def setup():
     for i in range(len(t_y)):
         t=turtle.Turtle()
         t.shape('turtle')
-        t.color(t_color[i])
         t.penup()
+        t.color(t_color[i])
         t.setpos(startline,t_y[i])
         #t.pendown()
         ts.append(t)
@@ -28,7 +28,7 @@ def race():
 
     while True:
         for current_t in ts:
-            move=random.randint(t_speed[i][0],t_speed[i][1])
+            move=random.randint(0,10)
             current_t.forward(move)
 
             x=current_t.xcor()
