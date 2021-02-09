@@ -6,20 +6,27 @@ for i in range(9):
         list.append('当たり')
     else:
         list.append('ハズレ')
-#print(list)
 count=0
-print('***宝探し***')
-while True:
+
+def status():
     for i in range(3):
         for j in range(3):
             if list[(i*3+j)]=='選択済みの場所':
                 print('x',end='')
+            elif list[(i*3+j)]=='的中':
+                print('O',end='')
             else:
                 print(i*3+j+1,end='')
         print()
+
+print('***宝探し***')
+while True:
+    status()
     select=int(input('好きな数字を選んで入力してください>>'))
     count+=1
     if select==tp:
+        list[select-1]='的中'
+        status()
         print('お宝を見つけました!')
         print(f'あなたはお宝を{count}回で発見しました!')
         break
