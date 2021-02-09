@@ -2,17 +2,15 @@ import random
 
 print('数当てゲームを始めます。3桁の数を当ててください!')
 select=1
-"""
 answer=list()
 for i in range(3):
     answer.append(random.randint(0,9))
-    """
-answer=[1,1,7]
-print(answer)
+#print(answer)
 while select!=2:
     prediction=list()
     hit=0
     ball=0
+    print()
     for i in range(len(answer)):
         num=int(input(f'{i+1}桁目の予想を入力(0~9)>>'))
         prediction.append(num)

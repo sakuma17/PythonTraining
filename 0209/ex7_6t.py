@@ -2,13 +2,12 @@ import random
 print('数あてゲームを始めます。3桁の数をあててください')
 answer=[random.randint(0,9) for i in range(3)]
 prediction=[None for i in range(3)]
-print(answer)
 while True:
 	hit=ball=0
 	for i in range(3):
-		prediction[i]=int(input(f'{i+1}桁目の予想を入力(0-9)>>'))
+		num=int(input(f'{i+1}桁目の予想を入力(0-9)>>'))
 		for j in range(3):
-			if answer[j]==prediction[i]:
+			if answer[j]==num:
 				if i==j:
 					hit+=1
 				else:
