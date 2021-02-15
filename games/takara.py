@@ -26,8 +26,8 @@ while True:
     count+=1
     if select==tp:
         list[select-1]='的中'
-        status()
         print('お宝を見つけました!')
+        status()
         print(f'あなたはお宝を{count}回で発見しました!')
         break
     else:
