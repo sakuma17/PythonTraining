@@ -3,7 +3,7 @@ import random,time
 lotts=['{:04d}'.format(i) for i in range(10000)]
 #print(lotts)
 n=int(input('宝くじを何枚買いますか?>>'))
-my_lotts=sorted(random.sample(lotts,n))#random.choiceは重複ありで選択
+my_lotts=sorted(random.sample(lotts,n))#random.choicesは重複ありで選択
 print(my_lotts)
 
 lucky='{:04d}'.format(random.randrange(10000))
